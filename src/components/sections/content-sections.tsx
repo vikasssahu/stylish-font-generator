@@ -102,7 +102,7 @@ export function HowToUseSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <Card key={step.number} hover gradient className="text-center">
               <CardHeader>
                 <div className="bg-gradient-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">

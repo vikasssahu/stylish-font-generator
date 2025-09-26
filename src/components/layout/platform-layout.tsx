@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { Header } from './header'
 import { Footer } from './footer'
 import { NameGenerator } from '@/components/features/name-generator'
@@ -127,7 +127,14 @@ export function PlatformLayout({ platform }: PlatformLayoutProps) {
               </p>
             </div>
             
-            <NameGenerator />
+            <Suspense fallback={
+              <div className="flex items-center justify-center py-12">
+                <div className="w-8 h-8 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+                <span className="ml-3 text-gray-600 dark:text-gray-300">Loading name generator...</span>
+              </div>
+            }>
+              <NameGenerator />
+            </Suspense>
           </div>
         </div>
       </section>

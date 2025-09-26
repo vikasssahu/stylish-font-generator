@@ -1,8 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { LogoIcon } from '@/components/ui/logo-icon'
-import { Smartphone, Sparkles, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 
 export function AdBannerSection() {

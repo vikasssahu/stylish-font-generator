@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { MobileMenu } from './mobile-menu'
 import Link from 'next/link'
-import { Facebook, Flame, Gamepad2, Instagram, ChevronDown, Sparkles, Zap } from 'lucide-react'
+import { Facebook, Flame, Gamepad2, Instagram, ChevronDown, Zap } from 'lucide-react'
 import { LogoIcon } from '../ui/logo-icon'
 
 interface HeaderProps {
