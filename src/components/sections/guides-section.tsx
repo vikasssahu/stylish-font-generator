@@ -106,7 +106,7 @@ export function GuidesSection() {
   const tabOptions = [
     {
       value: 'social-media',
-      label: 'Social Media',
+      label: 'Social',
       icon: <Users className="w-4 h-4" />
     },
     {
@@ -274,22 +274,12 @@ export function GuidesSection() {
             Font & Text Generator
           </Badge>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 mb-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 mb-6">
             18M+ fonts have been copied 🤯
           </h2>
           
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             This is how the tool works. Transform your text into stunning, unique fonts that work everywhere.
-          </p>
-        </div>
-
-        {/* Features Section */}
-        <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Why Choose Our Font Generator?
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Powerful features that make font generation effortless
           </p>
         </div>
 
@@ -362,7 +352,7 @@ export function GuidesSection() {
             <Card
               key={index}
               className={`
-                relative p-8 text-center border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl
+                relative p-8 text-center border bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl
                 shadow-xl hover:shadow-2xl transition-all duration-300
                 rounded-2xl group overflow-hidden
                 hover:scale-105
@@ -436,7 +426,7 @@ export function GuidesSection() {
               <h3 className="text-5xl md:text-6xl font-black tracking-tight mb-4 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_2px_24px_rgba(168,85,247,0.5)] animate-gradient-x">
                 <span className="inline-block transform -rotate-2">How It Works</span>
               </h3>
-              <p className="text-2xl md:text-3xl text-white/80 dark:text-white/90 max-w-2xl mx-auto font-medium tracking-wide animate-fade-in">
+              <p className="text-xl md:text-2xl text-white/80 dark:text-white/90 max-w-2xl mx-auto font-medium tracking-wide animate-fade-in">
                 <span className="inline-block px-3 py-1 rounded-xl bg-white/10 dark:bg-black/10 shadow-lg backdrop-blur-md border border-white/10">
                   Just 3 steps to your <span className="font-bold text-pink-400">perfect</span> style
                 </span>
@@ -528,7 +518,7 @@ export function GuidesSection() {
             Frequently Asked Questions
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Everything you need to know about our font generator
+            Everything you need to know
           </p>
         </div>
 
@@ -537,7 +527,7 @@ export function GuidesSection() {
             {faqData.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 dark:border-gray-700 rounded-lg px-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
                 <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <span className="text-base font-semibold text-gray-900 dark:text-white">
                     {faq.question}
                   </span>
                 </AccordionTrigger>

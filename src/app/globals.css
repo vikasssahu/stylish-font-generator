@@ -4,6 +4,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Font Configuration */
+:root {
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-instrument);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Instrument Serif;
+}
+
+body {
+  font-family: Inter;
+}
 /* Tailwind CSS Variables */
 :root {
     --card: oklch(1 0 0);

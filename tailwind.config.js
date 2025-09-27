@@ -59,7 +59,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        poppins: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        heading: ["var(--font-instrument)", "Georgia", "serif"],
+        body: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       animation: {
         'float': 'float 5s ease-in-out infinite',
