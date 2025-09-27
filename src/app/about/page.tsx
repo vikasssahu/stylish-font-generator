@@ -98,7 +98,7 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
@@ -136,7 +136,7 @@ export default function AboutPage() {
 
       {/* Features Section */}
       <section className="py-16 px-4 bg-white dark:bg-gray-900">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               What Makes Us Special
@@ -166,7 +166,7 @@ export default function AboutPage() {
 
       {/* Stats Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-orange-500 to-red-500">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Impact

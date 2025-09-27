@@ -7,7 +7,7 @@ import Image from 'next/image'
 export function AdBannerSection() {
   return (
     <section className="py-8 px-4">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         <div className="bg-gradient-to-r from-teal-400 to-emerald-300 rounded-3xl p-8 md:p-12 relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>

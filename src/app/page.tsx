@@ -6,6 +6,8 @@ import { Footer } from '@/components/layout/footer'
 import { HeroSection } from '@/components/sections/hero-section'
 import { AdBannerSection } from '@/components/sections/ad-banner-section'
 import { PlatformCardsSection } from '@/components/sections/platform-cards-section'
+import { GuidesSection } from '@/components/sections/guides-section'
+import { TagCloudSection } from '@/components/sections/tag-cloud-section'
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -38,6 +40,13 @@ export default function Home() {
     <main className="bg-[#f5f5f5] dark:bg-gray-800">
       <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <HeroSection />
+      <GuidesSection />
+      <TagCloudSection 
+        platform={{ name: 'Stylish' }}
+        title="Explore"
+        subtitle="All Categories"
+        description="Click on any tag below to generate stylish names in that specific style or category"
+      />
       <AdBannerSection />
       <PlatformCardsSection />
       <Footer />

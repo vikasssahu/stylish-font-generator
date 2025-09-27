@@ -136,22 +136,22 @@ export function NameGenerator() {
   const handleCategoryChange = useCallback((category: Category) => {
     setCurrentCategory(category)
     
-    // Regenerate if input exists
-    if (nameInput.trim()) {
-      setNameCards([])
-      generateAndDisplayNames(nameInput.trim(), category)
-    }
+    // Regenerate names based on current input or default
+    const inputToUse = nameInput.trim() || 'StylishNames'
+    setNameCards([])
+    generateAndDisplayNames(inputToUse, category, nameInput.trim() ? 24 : 12)
   }, [nameInput, generateAndDisplayNames])
 
   const loadMoreNames = useCallback(async () => {
-    if (!nameInput.trim() || isGenerating) return
+    if (isGenerating) return
     
     setIsGenerating(true)
     
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 1000))
     
-    await generateAndDisplayNames(nameInput.trim(), currentCategory, 24)
+    const inputToUse = nameInput.trim() || 'StylishNames'
+    await generateAndDisplayNames(inputToUse, currentCategory, 24)
     
     setIsGenerating(false)
   }, [nameInput, currentCategory, isGenerating, generateAndDisplayNames])
@@ -174,8 +174,9 @@ export function NameGenerator() {
 
   return (
     <div className="space-y-8">
-      {/* Input Section */}
-      <div className="max-w-2xl mx-auto space-y-6">
+      {/* Input Section - Sticky */}
+      <div className="sticky top-14 lg:top-24 z-30 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl py-6 shadow-lg">
+        <div className="max-w-2xl px-6 mx-auto space-y-6">
         <Input
           value={nameInput}
           onChange={(e) => handleInputChange(e.target.value)}
@@ -189,41 +190,14 @@ export function NameGenerator() {
           currentCategory={currentCategory}
           onCategoryChange={handleCategoryChange}
         />
+        </div>
       </div>
 
       {/* Results Section */}
-      <div className="space-y-6">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 mb-4">
-            {selectedTag ? `${selectedTag.charAt(0).toUpperCase() + selectedTag.slice(1)} Style Names` : 'Your Stylish Names'}
-          </h2>
-          <div className="inline-block mb-4">
-            {selectedTag ? (
-              <span className="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20 text-purple-700 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-800">
-                🏷️ {selectedTag.charAt(0).toUpperCase() + selectedTag.slice(1)} Theme
-              </span>
-            ) : (
-              <span className="bg-gradient-to-r from-orange-100 to-red-100 dark:from-orange-900/20 dark:to-red-900/20 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-800">
-                {currentCategory === 'all' && '✨ All Styles'}
-                {currentCategory === 'pro' && '🏆 Pro'}
-                {currentCategory === 'squad' && '👥 Squad'}
-                {currentCategory === 'clan' && '👑 Clan'}
-                {currentCategory === 'legendary' && '⭐ Legendary'}
-                {currentCategory === 'cool' && '😎 Cool'}
-              </span>
-            )}
-          </div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {selectedTag 
-              ? `Click the copy button on any ${selectedTag} style name to copy it instantly!`
-              : 'Click the copy button on any stylish name to copy it instantly! Use the Load More button to get unlimited stylish names.'
-            }
-          </p>
-        </div>
-
+      <div className="space-y-6 pt-8">
         <NameGrid nameCards={nameCards} />
 
-        {nameInput && nameCards.length > 0 && (
+        {nameCards.length > 0 && (
           <div className="text-center">
             <Button
               onClick={loadMoreNames}

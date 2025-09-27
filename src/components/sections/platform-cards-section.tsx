@@ -14,9 +14,9 @@ export function PlatformCardsSection() {
 
   return (
     <section className="py-16 px-4">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         {/* Platform Cards */}
-        <div className="max-w-3xl mx-auto">
+        <div>
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
               Choose Your Platform

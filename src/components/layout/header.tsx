@@ -116,12 +116,11 @@ export function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                         href="/facebook-stylish-names"
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-200 group"
                       >
-                        <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Facebook className="w-4 h-4 text-white" />
+                        <div className="size-8 bg-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <Facebook className="size-6 text-white" />
                         </div>
                         <div>
-                          <div className="font-medium text-gray-900 dark:text-white text-sm">Facebook</div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Names</div>
+                          <div className="font-medium text-gray-900 dark:text-white text-sm">FB</div>
                         </div>
                       </Link>
                       
@@ -130,11 +129,10 @@ export function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-all duration-200 group"
                       >
                         <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Instagram className="w-4 h-4 text-white" />
+                          <Instagram className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
                         </div>
                         <div>
-                          <div className="font-medium text-gray-900 dark:text-white text-sm">Instagram</div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Names</div>
+                          <div className="font-medium text-gray-900 dark:text-white text-sm">Insta</div>
                         </div>
                       </Link>
                       
@@ -143,11 +141,10 @@ export function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-all duration-200 group"
                       >
                         <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Flame className="w-4 h-4 text-white" />
+                          <Flame className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
                         </div>
                         <div>
                           <div className="font-medium text-gray-900 dark:text-white text-sm">Free Fire</div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Names</div>
                         </div>
                       </Link>
                       
@@ -156,11 +153,10 @@ export function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-green-50 dark:hover:bg-green-900/20 transition-all duration-200 group"
                       >
                         <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Gamepad2 className="w-4 h-4 text-white" />
+                          <Gamepad2 className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
                         </div>
                         <div>
                           <div className="font-medium text-gray-900 dark:text-white text-sm">BGMI</div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Names</div>
                         </div>
                       </Link>
                     </div>
@@ -207,9 +203,9 @@ export function Header({ isDarkMode, toggleTheme }: HeaderProps) {
               {/* CTA Button */}
               <Link href="/instagram-stylish-names">
                 <Button 
-                  className={`hidden sm:flex items-center space-x-2 px-4 py-2 rounded-xl font-semibold transition-all duration-200 hover:scale-105 ${
+                  className={`hidden sm:flex items-center space-x-2 px-4 py-2 rounded-xl font-semibold transition-all duration-100 hover:scale-105 ${
                     isScrolled 
-                      ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-zinc-900 shadow-lg shadow-orange-500/25' 
+                      ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg shadow-orange-500/25' 
                       : 'bg-white hover:bg-white/30 text-zinc-900 backdrop-blur-sm border border-white/20'
                   }`}
                 >

@@ -112,7 +112,7 @@ export default function ContactPage() {
 
       {/* Contact Form & Info Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Contact Form */}

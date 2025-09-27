@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { CopyIcon } from 'lucide-react'
 
 interface NameCard {
   id: string
@@ -44,7 +45,7 @@ function NameCardComponent({ card, onCopy }: NameCardProps) {
     >
       <div className="flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
-            <p className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 text-lg font-semibold break-words leading-relaxed">
+            <p className="text-foreground text-lg font-semibold break-words leading-relaxed">
             {card.name}
           </p>
         </div>
@@ -56,23 +57,19 @@ function NameCardComponent({ card, onCopy }: NameCardProps) {
           className={cn(
             "shrink-0 transition-all duration-200",
             isCopied 
-              ? "bg-green-500 hover:bg-green-600 text-white scale-110" 
+              ? "bg-green-500 hover:bg-green-600 text-white scale-105" 
               : "hover:bg-primary hover:text-primary-foreground"
           )}
         >
           {isCopied ? (
             <>
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              Copied!
             </>
           ) : (
             <>
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              Copy
+            <CopyIcon className="w-4 h-4" />
             </>
           )}
         </Button>
