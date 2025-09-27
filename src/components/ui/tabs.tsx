@@ -52,9 +52,9 @@ export function AnimatedTab({
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{
             type: "spring",
-            stiffness: 300,
-            damping: 30,
-            mass: 1,
+            stiffness: 400,
+            damping: 25,
+            mass: 0.8,
           }}
           className="absolute inset-0 z-0 rounded-full bg-background shadow-[0_2px_15px] shadow-black/5 backdrop-blur-sm"
         />

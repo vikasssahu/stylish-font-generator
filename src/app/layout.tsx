@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Instrument_Sans } from "next/font/google";
+import { Geist, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const inter = Geist({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const poppins = Instrument_Sans({
+const geist = Geist({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-geist",
+  display: "swap",
+});
+
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-instrument",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -48,7 +51,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
+        className={`${geist.variable} ${instrument.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
         {children}

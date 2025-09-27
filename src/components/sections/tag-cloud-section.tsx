@@ -24,7 +24,7 @@ export function TagCloudSection({
     { name: 'Cute', color: 'from-pink-500 to-rose-500', count: '1.8K' },
     { name: 'Gaming', color: 'from-green-500 to-emerald-500', count: '3.2K' },
     { name: 'Funny', color: 'from-purple-500 to-violet-500', count: '2.1K' },
-    { name: 'Heart', color: 'from-gray-700 to-gray-900', count: '1.5K' },
+    { name: 'Heart', color: 'from-red-500 to-pink-500', count: '1.5K' },
     { name: 'Royal', color: 'from-yellow-500 to-orange-500', count: '1.2K' },
     { name: 'Fire', color: 'from-red-500 to-orange-500', count: '2.8K' },
     { name: 'Ice', color: 'from-cyan-400 to-blue-500', count: '1.9K' },
@@ -39,7 +39,26 @@ export function TagCloudSection({
     { name: 'Dragon', color: 'from-orange-600 to-red-600', count: '2.4K' },
     { name: 'Phoenix', color: 'from-orange-500 to-red-500', count: '1.3K' },
     { name: 'Storm', color: 'from-blue-600 to-indigo-600', count: '1.7K' },
-    { name: 'Cosmic', color: 'from-indigo-500 to-purple-500', count: '1.5K' }
+    { name: 'Cosmic', color: 'from-indigo-500 to-purple-500', count: '1.5K' },
+    { name: 'Nickname', color: 'from-teal-500 to-cyan-500', count: '2.7K' },
+    { name: 'Style', color: 'from-purple-500 to-indigo-500', count: '3.1K' },
+    { name: 'Danger', color: 'from-red-600 to-red-800', count: '1.9K' },
+    { name: 'Hacker', color: 'from-green-600 to-emerald-600', count: '2.2K' },
+    { name: 'Attitude', color: 'from-orange-500 to-red-500', count: '2.8K' },
+    { name: 'Ego', color: 'from-yellow-500 to-orange-500', count: '1.6K' },
+    { name: 'Girl', color: 'from-pink-500 to-rose-500', count: '2.4K' },
+    { name: 'Instagram', color: 'from-pink-500 to-purple-500', count: '3.5K' },
+    { name: 'Invisible', color: 'from-gray-500 to-gray-700', count: '1.3K' },
+    { name: 'Alone', color: 'from-blue-600 to-indigo-600', count: '1.8K' },
+    { name: 'Anime', color: 'from-purple-500 to-pink-500', count: '2.9K' },
+    { name: 'Bold', color: 'from-gray-700 to-gray-900', count: '2.1K' },
+    { name: 'Boy', color: 'from-blue-500 to-cyan-500', count: '2.3K' },
+    { name: 'Fonts', color: 'from-indigo-500 to-purple-500', count: '3.8K' },
+    { name: 'Happy', color: 'from-yellow-400 to-orange-400', count: '2.6K' },
+    { name: 'Wishes', color: 'from-pink-400 to-rose-400', count: '1.7K' },
+    { name: 'Name', color: 'from-blue-500 to-indigo-500', count: '4.2K' },
+    { name: 'BGMI', color: 'from-orange-500 to-red-500', count: '3.1K' },
+    { name: 'Birthday', color: 'from-pink-500 to-purple-500', count: '1.9K' }
   ]
 
   const handleTagClick = (tagName: string) => {

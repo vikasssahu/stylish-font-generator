@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useRef, useEffect } from 'react'
+import { useState, useCallback, useRef, useEffect, Suspense } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { CategoryTabs } from './category-tabs'
@@ -16,12 +16,12 @@ interface NameCard {
   isLoading: boolean
 }
 
-export function NameGenerator() {
+function NameGeneratorContent() {
   const [nameInput, setNameInput] = useState('')
   const [currentCategory, setCurrentCategory] = useState<Category>('all')
   const [nameCards, setNameCards] = useState<NameCard[]>([])
   const [isGenerating, setIsGenerating] = useState(false)
-  const [selectedTag, setSelectedTag] = useState<string | null>(null)
+  const [, setSelectedTag] = useState<string | null>(null)
   const debounceTimer = useRef<NodeJS.Timeout | null>(null)
   const searchParams = useSearchParams()
   
@@ -224,5 +224,30 @@ export function NameGenerator() {
         )}
       </div>
     </div>
+  )
+}
+
+export function NameGenerator() {
+  return (
+    <Suspense fallback={
+      <div className="space-y-8">
+        <div className="sticky top-20 lg:top-24 z-30 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl py-6 shadow-lg">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse" />
+            <div className="flex gap-2">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="h-10 w-20 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          <div className="h-8 w-64 bg-gray-200 dark:bg-gray-700 rounded mx-auto mb-4 animate-pulse" />
+          <div className="h-4 w-96 bg-gray-200 dark:bg-gray-700 rounded mx-auto animate-pulse" />
+        </div>
+      </div>
+    }>
+      <NameGeneratorContent />
+    </Suspense>
   )
 }

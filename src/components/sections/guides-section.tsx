@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import * as React from 'react'
-import { Button } from '@/components/ui/button'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { AnimatedTabs } from '@/components/ui/tabs'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
@@ -15,8 +15,6 @@ import {
   GraduationCap, 
   Sparkles,
   Copy,
-  CheckCircle,
-  ArrowRight,
   Star,
   Zap,
   Shield,
@@ -132,7 +130,14 @@ export function GuidesSection() {
     switch (selectedTab) {
       case 'social-media':
         return (
-          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl">
+          <motion.div 
+            key="social-media"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl"
+          >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -150,14 +155,21 @@ export function GuidesSection() {
                 </div>
               </div>
               <div className="flex justify-center">
-<Image src="/1.png" alt="Social Media Fonts" width={500} height={500} />
+                <Image src="/1.png" alt="Social Media Fonts" width={500} height={500} />
               </div>
             </div>
-          </div>
+          </motion.div>
         )
       case 'games':
         return (
-          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl">
+          <motion.div 
+            key="games"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl"
+          >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -175,15 +187,22 @@ export function GuidesSection() {
               </div>
               <div className="flex justify-center">
                 <div className="relative">
-                  <Image src="/1.png" alt="Gaming Fonts" width={500} height={500} />
+                  <Image src="/2.png" alt="Gaming Fonts" width={500} height={500} />
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )
       case 'art':
         return (
-          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl">
+          <motion.div 
+            key="art"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl"
+          >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -201,15 +220,22 @@ export function GuidesSection() {
               </div>
               <div className="flex justify-center">
                 <div className="relative">
-                  <Image src="/1.png" alt="Art & Design Fonts" width={500} height={500} />
+                  <Image src="/3.png" alt="Art & Design Fonts" width={500} height={500} />
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )
       case 'education':
         return (
-          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl">
+          <motion.div 
+            key="education"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl"
+          >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -227,11 +253,11 @@ export function GuidesSection() {
               </div>
               <div className="flex justify-center">
                 <div className="relative">
-                  <Image src="/1.png" alt="Education Fonts" width={500} height={500} />
+                  <Image src="/4.png" alt="Education Fonts" width={500} height={500} />
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )
       default:
         return null
@@ -248,7 +274,7 @@ export function GuidesSection() {
             Font & Text Generator
           </Badge>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 mb-6">
             18M+ fonts have been copied 🤯
           </h2>
           
@@ -386,7 +412,9 @@ export function GuidesSection() {
             />
           </div>
           <div className="space-y-10">
-            {renderTabContent()}
+            <AnimatePresence mode="wait">
+              {renderTabContent()}
+            </AnimatePresence>
           </div>
         </section>
 
